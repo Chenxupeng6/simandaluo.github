@@ -97,8 +97,6 @@
     
     <div class="content" id="future" class="hidden">
         <h2></h2>
-
-        
         <p>公民2946年10月5日，在地球联合帝国【UEE】宣战下并发动了民兵动员倡议，将提供资金和技术以及新型船舶，民兵组织【星辰梦旅】舰队由此应运而生，一开始舰队只有9位成员，在后续的慢慢发展过程中我们爆发出了惊人的潜力，在探索和打捞等后勤领域，我们具有强大的团队和强大的舰队，银河使我们有移动的基地，英仙座在我们左右护航，还有强大的北极星，我们足以应对宇宙中的各种危险和挑战，舰队发展至今已有7年的时间，我们的队伍还在扩大中。。</p>
     </div>
 
@@ -116,6 +114,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const contents = document.querySelectorAll('.content');
 
     tabs.forEach(tab => {
+        tab.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+        });
+
+        tab.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+
         tab.addEventListener('click', function(e) {
             e.preventDefault();
             const target = this.getAttribute('data-target');
