@@ -35,16 +35,62 @@
         background-color: #007bff;
         padding: 10px 20px;
         border-radius: 5px;
+        margin: 10px;
+    }
+    .selected {
+        background-color: #ffc107;
+    }
+    .hidden {
+        display: none;
     }
 </style>
 </head>
 <body>
 <div class="container">
-    <h1>星际公民斯曼达洛舰队</h1>
+    <h1>星际公民舰队</h1>
     <img src="1.png" alt="舰队图标" class="fleet-icon">
     <p>欢迎来到星际公民舰队，我们是一个致力于探索宇宙的舰队。</p>
     <p>加入我们，一起展开无限可能的星际之旅！</p>
-    <a href="https://join.fleet.com">加入我们的舰队</a>
+    
+    <a href="#" class="tab" data-target="history">舰队历史</a>
+    <a href="#" class="tab" data-target="business">舰队主营业务</a>
+    <a href="#" class="tab" data-target="future">舰队未来的方向</a>
+    
+    <div class="content" id="history" class="hidden">
+        <h2>舰队历史</h2>
+        <p>这里是舰队的悠久历史介绍。</p>
+    </div>
+    
+    <div class="content" id="business" class="hidden">
+        <h2>舰队主营业务</h2>
+        <p> 斯曼达洛舰队主要从事：商业货运护送、小型舰队驻地建设承包、中大型任务护送安保任务、领域涉及矿产资源、地域冲突维护等工作。</p>
+    </div>
+    
+    <div class="content" id="future" class="hidden">
+        <h2>舰队未来的方向</h2>
+        <p>这斯曼达洛舰队致力于打造超一流的舰队驻地建设、商业货运护送的专业舰队、我们向往和平与稳定。</p>
+    </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = this.getAttribute('data-target');
+
+            tabs.forEach(tab => tab.classList.remove('selected'));
+            contents.forEach(content => content.classList.add('hidden'));
+
+            this.classList.add('selected');
+            document.getElementById(target).classList.remove('hidden');
+        });
+    });
+});
+</script>
+
 </body>
 </html>
