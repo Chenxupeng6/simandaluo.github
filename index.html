@@ -1,140 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>星际公民斯曼达洛舰队</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-image: url('https://img1.baidu.com/it/u=3122680197,3099387215&fm=253&app=138&f=JPEG?w=1422&h=800');
-        background-size: cover;
-        background-repeat: repeat;
-        color: white;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        position: relative;
-    }
-    .container {
-        padding: 20px;
-    }
-    h1 {
-        font-size: 36px;
-    }
-    p {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-    .fleet-icon {
-        width: 100px;
-        height: 100px;
-    }
-    a {
-        color: white;
-        text-decoration: none;
-        background-color: #007bff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        margin: 10px;
-    }
-    .selected {
-        background-color: #ffc107;
-    }
-    .hidden {
-        display: none;
-    }
-    .join-btn {
-        background-color: #28a745;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        margin-top: 20px;
-        display: inline-block;
-    }
-    .fleet-logo {
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        top: 10px;
-    }
-    .fleet-logo-left {
-        left: 10px;
-    }
-    .fleet-logo-right {
-        right: 10px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星际公民斯曼达洛舰队</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <img src="1.png" alt="舰队标志" class="fleet-logo fleet-logo-left">
-    <img src="1.png" alt="舰队标志" class="fleet-logo fleet-logo-right">
-    <h1>星际公民斯曼达洛舰队</h1>
-    <img src="1.png" alt="舰队图标" class="fleet-icon">
-    <p>欢迎来到星际公民舰队，我们是一个致力于探索宇宙的舰队。</p>
-    <p>加入我们，一起展开无限可能的星际之旅！</p>
-    
-    <a href="#" class="tab" data-target="history">舰队历史</a>
-    <a href="#" class="tab" data-target="business">舰队主营业务</a>
-    <a href="#" class="tab" data-target="future">舰队未来的方向</a>
-    <a href="#" class="tab" data-target="member">舰队成员</a>
-    
-    <div class="content" id="history" class="hidden">
-        <h2></h2>
+    <header>
+    <button class="menu"> &#9776; </button>
+    <h1>斯曼达洛舰队</h1>
+    <nav>
+    <ul>
+        <li><a href="#">舰队资讯</a></li>
+        <li><a href="#">舰队成员</a></li>
+        <li><a href="#">舰队任务</a></li>
+        <li><a href="#">舰队故事</a></li>
+    </ul>
+    </nav>
+    </header>
+    <main>
+    <section class="news">
+    <h2>斯曼达洛舰队欢迎您的加入！</h2>
+    <p>斯曼达洛舰队承接各类任务,武装货运押送、商业货运护送、小中型舰队基地建设承包</p>
+    <p><em>点击下方按钮，加入我们</em></p>
+    <p><a href="https://robertsspaceindustries.com/orgs/DREAMJOURN">加入我们</a></p>
 
-        
-        <p>公民2946年10月5日，在地球联合帝国【UEE】宣战下并发动了民兵动员倡议，将提供资金和技术以及新型船舶，民兵组织【星辰梦旅】舰队由此应运而生，一开始舰队只有9位成员，在后续的慢慢发展过程中我们爆发出了惊人的潜力，在探索和打捞等后勤领域，我们具有强大的团队和强大的舰队，银河使我们有移动的基地，英仙座在我们左右护航，还有强大的北极星，我们足以应对宇宙中的各种危险和挑战，舰队发展至今已有7年的时间，我们的队伍还在扩大中。。</p>
+  
+    </section>
+
+
+
+    <section class="slogan">
+        <h2>舰队UEE2945年招新活动开始啦!</h2>
+        <p>舰队在UEE 2945年周年庆活动中即将招收10名志同道合的公民,<br>欢迎各位公民踊跃报名</p>
+    </section>
+
+
+    <section class="shop">
+    <img src="images/北极星.jpg" alt="舰队主力北极星护卫舰">
+
+    <div class="info">
+    <h2>这是我们的北极星舰队基地</h2>
+    <p>斯曼达洛舰队拥有超过10艘北极星护卫舰,以及各类护卫舰、导弹舰！</p>
     </div>
-    
-    <div class="content" id="business" class="hidden">
-        <h2></h2>
+    </section>
 
-        
-        <p> 斯曼达洛舰队主要从事：商业货运护送、小型舰队驻地建设承包、中大型任务护送安保任务、领域涉及矿产资源、地域冲突维护等工作。</p>
-    </div>
-    
-    <div class="content" id="future" class="hidden">
-        <h2></h2>
-        <p>公民2946年10月5日，在地球联合帝国【UEE】宣战下并发动了民兵动员倡议，将提供资金和技术以及新型船舶，民兵组织【星辰梦旅】舰队由此应运而生，一开始舰队只有9位成员，在后续的慢慢发展过程中我们爆发出了惊人的潜力，在探索和打捞等后勤领域，我们具有强大的团队和强大的舰队，银河使我们有移动的基地，英仙座在我们左右护航，还有强大的北极星，我们足以应对宇宙中的各种危险和挑战，舰队发展至今已有7年的时间，我们的队伍还在扩大中。。</p>
-    </div>
+    <section class="product">
+        <div>
+            <img src="images/挖矿.jpg" alt="专业的采矿技术和团队">
+            <h3>采矿模块</h3>
+            <p>专业的采矿技术和团队,致力于打造一流的采矿服务</p>
+        </div>
+        <div>
+            <img src="images/英仙座.jpg" alt="专业的安保服务和团队">
+            <h3>安保模块</h3>
+            <p>专业的安保运输和团队,致力于打造一流的安保服务</p>
+        </div>
+        <div>
+            <img src="images/货运.jpg" alt="专业的货运渠道和团队">
+            <h3>货运模块</h3>
+            <p>专业的货运器材和团队,致力于打造一流的货运承包服务</p>
+        </div>
 
-    <div class="content" id="member" class="hidden">
-        <h2></h2>
-        <p>现有成员12名</p>
-    </div>
 
-    <a href="https://robertsspaceindustries.com/orgs/DREAMJOURN" class="join-btn">加入我们舰队</a>
-</div>
+    </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const tabs = document.querySelectorAll('.tab');
-    const contents = document.querySelectorAll('.content');
+    </main>
 
-    tabs.forEach(tab => {
-        tab.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px)';
-        });
-
-        tab.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-
-        tab.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = this.getAttribute('data-target');
-
-            tabs.forEach(tab => tab.classList.remove('selected'));
-            contents.forEach(content => content.classList.add('hidden'));
-
-            this.classList.add('selected');
-            document.getElementById(target).classList.remove('hidden');
-        });
-    });
-});
-</script>
-
+    <footer>
+        <p>COPYRIGHT © 2024 斯曼达洛舰队 Spartan Mandalorian Fleet. </p>
+    </footer>
 </body>
 </html>
