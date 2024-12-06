@@ -56,6 +56,48 @@ header a:hover {
     object-fit: cover; /* 确保视频内容居中并占据整个模块 */
   }
 
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+    pointer-events: none; /* 使得文本可以点击，即使视频上有内容 */
+    text-align:center;
+    background-size: cover;
+    flex-direction: column;
+  }
+   
+  .video-overlay h2 {
+    color: rgb(252, 251, 251);
+    pointer-events: auto; /* 使文本可以响应点击事件 */
+    font-size: 70px;
+    margin-top: 50px;
+    display: flex;
+    text-align: center;
+  }
+  .video-overlay p {
+    pointer-events: auto; /* 使文本可以响应点击事件 */
+    color: #fef7e6;
+    font-size: 18px;
+    margin: 35px 0;
+    display: flex;
+    text-align: center;
+    line-height: 2em;
+   
+  }
+  .video-overlay a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #acacac;
+    padding: 10px 20px;
+    border-radius: 5px;
+    justify-content: center;
+}
+
 .news {
     background-color: rgba(40, 40, 40, 0.9);
     color: white;
