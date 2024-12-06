@@ -5,8 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>星际公民斯曼达洛舰队</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+        }
+        .background {
+            position: fixed;  /* 让背景图片固定位置 */
+            top: 0;
+            left: 0;
+            width: 100%;    /* 宽度设置为100% */
+            height: 100%;   /* 高度设置为100% */
+            background: url(images/商业谈判.jpg) no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.05;   /* 设置背景的透明度 */
+            /* z-index: -1; */
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+      </style>
 </head>
 <body>
+    
     <header>
     <button class="menu"> &#9776; </button>
     <h1>斯曼达洛舰队</h1>
@@ -20,11 +43,14 @@
     </nav>
     </header>
     <main>
+    
     <section class="news">
+    </video>
     <h2>斯曼达洛舰队欢迎您的加入！</h2>
-    <p>斯曼达洛舰队承接各类任务,武装货运押送、商业货运护送、小中型舰队基地建设承包</p>
+    <p>斯曼达洛舰队承接各类任务,<br>武装货运押送、商业货运护送、小中型舰队基地建设承包</p>
     <p><em>点击下方按钮，加入我们</em></p>
-    <p><a href="https://robertsspaceindustries.com/orgs/DREAMJOURN">加入我们</a></p>
+    <div class="content"><p><a href="https://robertsspaceindustries.com/orgs/DREAMJOURN">加入我们</a></p></div>
+    
 
   
     </section>
@@ -65,11 +91,13 @@
 
 
     </section>
-
+ 
     </main>
-
+    
     <footer>
         <p>COPYRIGHT © 2024 斯曼达洛舰队 Spartan Mandalorian Fleet. </p>
     </footer>
+    <div class="background"></div>
+
 </body>
 </html>
