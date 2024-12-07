@@ -10,7 +10,19 @@ header {
     width: 100%; 
     position: fixed;
 }
+.dhone {
+    background-color: rgb(35, 28, 26,0.8);
+    height: 80px;
+    width: 100%; 
+    position: fixed;
+}
 header ul {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+}
+.dhone ul {
     position: absolute;
     right: 5vw;
     top: 0;
@@ -32,12 +44,23 @@ header li {
     display: inline;
     margin-right: 4vw;
 }
+.dhone li {
+    display: inline;
+    margin-right: 4vw;
+}
 header a {
+    color: white;   
+    text-decoration: none;
+}
+.dhone a {
     color: white;   
     text-decoration: none;
 }
 header a:hover {
      text-decoration: underline;
+}
+.dhone a:hover {
+    text-decoration: underline;
 }
 
 .video-container {
@@ -110,6 +133,7 @@ header a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 .news h2 {
     font-size: 60px;
@@ -143,13 +167,19 @@ footer {
 }
 .shop {
     display: flex;
-}
-.shop img{
-    width: 50%; 
+    background-image: url(images/北极星.jpg);
+    background-color: white;
+    background-repeat:no-repeat;
+    background-position: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    color: white;
+    background-size: cover;
 }
 .info {
-    width: 50%;
-    background-color: white;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,6 +188,7 @@ footer {
 .info h2 {
    font-size:  70px;
    margin-bottom: 30px ;
+   text-decoration: none;
 
 }
 .info p {
@@ -168,7 +199,7 @@ footer {
  }
  .slogan {
     background-color: #485652;
-    color: white;
+    color: #ffffff;
     height: 250px;
     display: flex;
     justify-content: center;
@@ -195,7 +226,8 @@ footer {
     background-color: #ede9db;
     justify-content: space-between;
     align-items: center;
-    padding: 400px,400px,100px;
+    padding: 100px,180px,80px;
+
 
 }
 .product div {
@@ -203,20 +235,23 @@ footer {
     text-align: center;
 
 }
-.product img {
+.product img {  
     width: 100%;
     text-align: center;
     border-radius: 10px;
 }
 .product h3 {
-    font-size: 20px;
+    font-size: 45px;
     margin: 20px,0;  
 }
 .product p {
-    font-size: 14px;
-    line-height: 1.6em; 
+    font-size: 20px;
+    line-height: 4em; 
 }
 .menu {
+    display: none;
+}
+.dh {
     display: none;
 }
 
@@ -244,6 +279,7 @@ footer {
         border: none;
         cursor: pointer;
     }
+    
     .shop {
         flex-direction: column;
     }
