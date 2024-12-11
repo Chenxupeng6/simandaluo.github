@@ -125,7 +125,9 @@ header a:hover {
    
 }
 .news a {
-    color: white;
+    color: var(--white-color);
+    background-color:rgba(40, 40, 40, 0.2);
+    cursor: pointer;
     text-decoration: none;
     border: 1px solid #acacac;
     padding: 10px 20px;
