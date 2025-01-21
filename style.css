@@ -308,4 +308,14 @@ footer {
         margin-bottom: 30px;
         
     }
+      .DJS {
+        flex-direction: column;
+        padding: 60px;
+
+    }
+    .DJS div {
+        
+        margin-bottom: 30px;
+        
+    }
 }
