@@ -221,6 +221,43 @@ footer {
 .menu {
     display: none;
 }
+.DJS {
+    /* display: flex; */
+    display: grid;
+    background-color: #e5e4e4;
+    justify-content: start;
+    align-items: center; 
+    gap: 100px;
+    /* flex-wrap: wrap; */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    padding: 0;
+    overflow: auto;
+    /* box-sizing: border-box; */
+
+}
+.DJS div {
+    width: 300px;
+    text-align: center;
+
+}
+.DJS img{
+    width: 150px;
+    height: auto;
+    text-align: center;
+    border-radius: 30px;
+    margin: 0;
+    /* box-shadow: 0 4px 8px rgba(69, 68, 68, 0.7); */
+    max-width: 100%
+}
+.DJS h3 {
+    font-size: 20px;
+    margin: 20px,0;  
+}
+.DJS p {
+    font-size: 14px;
+    line-height: 1.6em; 
+}
+
 
 /* 响应式语法 */
 @media screen and (max-width:768px){
