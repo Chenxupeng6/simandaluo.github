@@ -183,7 +183,93 @@
         </div>
 
     </section>
-
+    <section>
+        <script>
+            const data = {
+                name: "舰队首席总指挥(Alicemio)",
+                children: [
+                    {
+                        name: "舰队副总指挥(MandLoraSL)",
+                        children: [
+                            {name: "急先锋1队",children: [{ name: "成员 0011221100" },]},
+                            { name: "成员 0011221100" },
+                            { name: "成员 Huan Mo" },
+                            { name: "成员 Acity" },
+                            { name: "成员 NaiNiu9565" },
+                            { name: "成员 Palmcolor" },
+                            { name: "成员 Scholar" },
+                            { name: "成员 zbfrank_zb" },
+                            { name: "成员 MrAcat" },
+                        ]
+                    },
+                    {   
+                        name: "人力与宣传部(CHENXUPENG)",
+                        children: [
+                            { name: "成员 CHENXUPENG" },
+                        ]
+                    },
+                    {   
+                        name: "战略资源部",
+                        children: [
+                            { name: "成员 W-rlmj" }
+                        ]
+                    },
+                    {   
+                        name: "信息统战部",
+                        children: [
+                            { name: "成员 sldmax123" }
+                        ]
+                    },
+                    {   
+                        name: "高危环境监测部",
+                        children: [
+                            { name: "成员 " }
+                        ]
+                    }
+                ]
+            };
+    
+            const width = 1000;
+            const height = 1000;
+    
+            const svg = d3.select("body").append("svg")
+                .attr("width", width)
+                .attr("height", height);
+    
+            const g = svg.append("g")
+                .attr("transform", "translate(50,50)");
+    
+            const tree = d3.tree().size([width - 200, height - 200]);
+    
+            const root = d3.hierarchy(data);
+            tree(root);
+    
+            const link = g.selectAll(".link")
+                .data(root.links())
+                .enter().append("path")
+                .attr("class", "link")
+                .attr("d", d3.linkHorizontal()
+                    .x(d => d.y)
+                    .y(d => d.x));
+    
+            const node = g.selectAll(".node")
+                .data(root.descendants())
+                .enter().append("g")
+                .attr("class", "node")
+                .attr("transform", d => `translate(${d.y},${d.x})`);
+            // 方框大小
+            node.append("rect")
+                .attr("width", 220)
+                .attr("height", 40)
+                .attr("x", -110)
+                .attr("y", -18);
+    
+            node.append("text")
+                .attr("dy", ".40em")
+                .attr("text-anchor", "middle")
+                .text(d => d.data.name);
+        </script>
+    </section>
     </main>
     
     <footer>
