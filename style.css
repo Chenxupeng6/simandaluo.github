@@ -274,7 +274,19 @@ footer {
     stroke: #977d7f;
     stroke-width: 2.5px;
 }
-
+.tooltip {
+    position: absolute;
+    background: white;
+    border: 1px solid #000;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* 初始透明度为 0 */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
+    pointer-events: none; /* 防止提示框遮挡鼠标事件 */
+}
+.tooltip.visible {
+    opacity: 1; /* 显示时透明度为 1 */
+}
 
 /* 响应式语法 */
 @media screen and (max-width:768px){
