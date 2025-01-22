@@ -257,6 +257,23 @@ footer {
     font-size: 14px;
     line-height: 1.6em; 
 }
+.node {
+    cursor: pointer;
+}
+.node rect {
+    fill: #d69249;
+    stroke: #d5d1d1;
+    stroke-width: 1.5px;
+}
+.node text {
+    font-size: 15x;
+}
+/* 线条 */
+.link {
+    fill: none;
+    stroke: #977d7f;
+    stroke-width: 2.5px;
+}
 
 
 /* 响应式语法 */
