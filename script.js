@@ -1,30 +1,35 @@
-function updateCountdown() {
-    // 获取所有倒计时容器
-    const countdownElements = document.querySelectorAll(".countdown");
-
-    countdownElements.forEach((element) => {
-        // 获取目标日期
-        const endDate = new Date(element.getAttribute("data-end-date")).getTime();
-        const now = new Date().getTime();
-        const timeLeft = endDate - now;
-
-        // 计算天、小时、分钟和秒
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        // 更新倒计时显示
-        if (timeLeft > 0) {
-            element.innerHTML = `${days}天 ${hours}小时 ${minutes}分钟 ${seconds}秒`;
-        } else {
-            element.innerHTML = "倒计时结束！";
-        }
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    // 模块点击事件
+    document.querySelectorAll('.module').forEach(module => {
+        module.addEventListener('click', () => {
+            // 根据模块类型跳转不同页面
+            const isNewbie = module.classList.contains('newbie');
+            window.location.href = isNewbie ? 'https://www.simandaluo.cn/NewbieGuide' : 'https://www.simandaluo.cn/home';
+        });
     });
-}
 
-// 每秒更新一次倒计时
-setInterval(updateCountdown, 1000);
+    // 加入按钮交互
+    const joinBtn = document.querySelector('.join-btn');
+    joinBtn.addEventListener('mouseover', () => {
+        joinBtn.style.transform = 'scale(1.05)';
+    });
+    
+    joinBtn.addEventListener('mouseout', () => {
+        joinBtn.style.transform = 'scale(1)';
+    });
+    
+    joinBtn.addEventListener('click', () => {
+        window.location.href = '/join';
+    });
 
-// 初始化倒计时
-updateCountdown();
+    // 图标悬停动画
+    const icon = document.querySelector('.icon');
+    icon.addEventListener('mouseover', () => {
+        icon.style.transform = 'rotate(15deg) scale(1.1)';
+    });
+    
+    icon.addEventListener('mouseout', () => {
+        icon.style.transform = 'rotate(0deg) scale(1)';
+    });
+});
