@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 自动生成目录
     const sections = document.querySelectorAll('.guide-section');
-    const menu = document.querySelector('.menu');
+    const menu = document.querySelector('.menu'); 
     
     sections.forEach(section => {
         const heading = section.querySelector('h2, h3');
