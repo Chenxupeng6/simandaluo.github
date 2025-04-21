@@ -1,1 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星际公民斯曼达洛舰队</title>
+    <link rel="stylesheet" href="shouye.css">
+    <link data-react-helmet="true" rel="icon" href="https://cdn.apifox.com/app/project-icon/custom/20241209/50381166-612b-4ad7-8046-f09c240394d1.jpeg">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <style>
+        body, html {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+        }
+        .background {
+            position: fixed;  /* 让背景图片固定位置 */
+            top: 0;
+            left: 0;
+            width: 100%;    /* 宽度设置为100% */
+            height: 100%;   /* 高度设置为100% */
+            background: url(images/商业谈判.jpg) no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.05;   /* 设置背景的透明度 */
+            z-index: -1;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+      </style>
+</head>
+<body>
+    
+    <header>
+    <button class="menu"> &#9776; </button>
+    <h1>斯曼达洛舰队</h1>
+    <nav>
+    <ul>
+        <li><a href="/news.html">舰队资讯</a></li> 
+        <li><a href="https://robertsspaceindustries.com/orgs/DREAMJOURN/members">舰队成员</a></li>
+        <li><a href="#">舰队任务</a></li>
+        <li><a href="#">舰队故事</a></li>
+    </ul>
+    </nav>
+    </header>
+    <main>
+    
+    <section class="news">
+    <h2>斯曼达洛舰队欢迎您的加入！</h2>
+    <p>斯曼达洛舰队承接各类任务,<br>武装货运押送、商业货运护送、小中型舰队基地建设承包</p>
+    <p><em>点击下方按钮，加入我们</em></p>
+    <div class="content"><p><a href="https://robertsspaceindustries.com/orgs/DREAMJOURN">加入舰队</a></p></div>
+    <div class="content"><p><a href="https://qm.qq.com/q/WWrKLVvzGg">加入群聊【Alicemio】</a></p></div>
+    </section>
 
+
+    <section class="beijixing">
+        <div class="video-container">
+            <video autoplay muted loop controls>
+              <source src="images/好看的.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">
+                <h2>快看,北极星！</h2>
+                <p>听说斯曼达洛舰队拥有过超过10艘北极星的强大舰队呢!</p>
+                <div class="content"><p><a href="https://robertsspaceindustries.com/orgs/DREAMJOURN">加入我们</a></p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="shop">
+    <img src="images/北极星.jpg" alt="舰队主力北极星护卫舰">
+
+    <div class="info">
+    <h2>这是我们的北极星舰队基地</h2>
+    <p>斯曼达洛舰队拥有超过10艘北极星护卫舰,以及各类护卫舰、导弹舰！</p>
+    </div>
+    </section> -->
+
+    <section class="slogan">
+        <h2>舰队UEE2955年招新活动开始啦!</h2>
+        <p>舰队在UEE 2945年周年庆活动中即将招收10名志同道合的公民,<br>欢迎各位公民踊跃报名</p>
+    </section>
+
+    
+    <section class="product">
+        <div>
+            <img src="images/挖矿.jpg" alt="专业的采矿技术和团队">
+            <h3>采矿模块</h3>
+            <p>专业的采矿技术和团队,致力于打造一流的采矿服务</p>
+        </div>
+        <div>
+            <img src="images/英仙座.jpg" alt="专业的安保服务和团队">
+            <h3>安保模块</h3>
+            <p>专业的安保运输和团队,致力于打造一流的安保服务</p>
+        </div>
+        <div>
+            <img src="images/货运.jpg" alt="专业的货运渠道和团队">
+            <h3>货运模块</h3>
+            <p>专业的货运器材和团队,致力于打造一流的货运承包服务</p>
+        </div>
+    </section>
+
+    <section class="DJS1">
+        <div>
+            <h4>星际公民活动倒计时</h4>
+        </div>
+    </section>
+
+
+
+    <section class="DJS">
+
+        <div>
+            <img src="images/周年庆.jpg" alt="周年庆活动"data-id="1" data-description="这是图片 1 的说明文字。">
+            <h3>周年庆活动</h3>
+            <p>最新飞船展览</p>
+            <div class="countdown" data-end-date="2025-11-17T00:00:00"></div>
+            <script src="shouye.js"></script>
+        </div>
+        <div>
+            <img src="images/灯光节.jpg" alt="灯光节活动"data-id="2"data-description="这是图片 2 的说明文字。">
+            <h3>灯光节活动</h3>
+            <p>获取小礼品</p>
+            <div class="countdown" data-end-date="2025-12-22T00:00:00"></div>
+            <script src="shouye.js"></script>
+        </div>
+        <div>
+            <img src="images/舰队周.jpg" alt="舰队周活动"data-id="3"data-description="这是图片 3 的说明文字。">
+            <h3>舰队周活动</h3>
+            <p>最新的飞船购买活动</p>
+            <div class="countdown" data-end-date="2025-05-18T00:00:00"></div>
+            <script src="shouye.js"></script>
+        </div>
+
+        <div>
+            <img src="images/火红节日.jpg" alt="火红节活动"data-id="4"data-description="【火红节 2955】 
+            我们将告别2024年,并以“火红节 2955”庆典步入新的2025年。按照地球联合帝国UEE的传统,巴努人在斯坦顿各地隐藏了红包,并会提供各种红色与金色主题的飞船涂装,以祝福新一年的好运!【邀请奖励】
+            为庆祝2025年农历新年,火红节将开启邀请活动!邀请好友加入冒险,你和你的好友都可以免费获得带煤火涂装的德雷克黑蜻蜓!(邀请规则和往期都是一样的),【免费试飞】
+            在火红节免费试飞活动中开启新年的全新冒险吧！邀请有志成为飞行员的朋友免费探索宇宙，并可试驾多款标志性飞船！">
+            <h3>火红节活动</h3>
+            <p>一起狂欢</p>
+            <div class="countdown" data-end-date="2025-02-08T00:00:00"></div>
+            <script src="shouye.js"></script>
+        </div>
+        <div>
+            <img src="images/科拉爱人节.jpg" alt="科拉爱人节"data-id="5"data-description="【科拉爱人节 2955】
+            爱意弥漫空中，随着科拉爱人节(SC游戏内的情人节庆典)重返宇宙,带来令人心动的全新惊喜。今年,除了会有一系列全新的节日物品外,我们还将举办漫画制作比赛,让你有机会赢得一艘让人倾心的飞船!">
+            <h3>科拉爱人节</h3>
+            <p>有新的活动哦</p>
+            <div class="countdown" data-end-date="2025-02-11T00:00:00"></div>
+            <script src="shouye.js"></script>
+        </div>
+        <div>
+            <img src="images/幸运星节.jpg" alt="幸运星节日"data-id="6"data-description="这是图片 5 的说明文字。">
+            <h3>幸运星节日</h3>
+            <p>最新飞船展览</p>
+            <div class="countdown" data-end-date="2025-03-15T00:00:00"></div>
+            <script src="shouye.js"></script>
+        </div>
+        <div>
+            <img src="images/板机鱼节.jpg" alt="板机鱼节"data-id="7"data-description="这是图片 7 的说明文字。">
+            <h3>板机鱼节</h3>
+            <p>最新飞船展览</p>
+            <div class="countdown" data-end-date="2025-04-01T00:00:00"></div>
+            <script src="shouye.js"></script>
+        </div>
+        <div>
+            <img src="images/外星周.jpg" alt="外星周节日"data-id="8"data-description="这是图片 8 的说明文字。">
+            <h3>外星周节日</h3>
+            <p>最新外星飞船展览</p>
+            <div class="countdown" data-end-date="2025-06-17T00:00:00"></div>
+            <script src="shouye.js"></script>
+        </div>
+        <div>
+            <img src="images/奠基节.jpg" alt="奠基节"data-id="9"data-description="这是图片 9 的说明文字。">
+            <h3>奠基节</h3>
+            <p>最新飞船展览</p>
+            <div class="countdown" data-end-date="2025-07-01T00:00:00"></div>
+            <script src="shouye.js"></script>
+        </div>
+        <div>
+            <img src="images/海盗周.jpg" alt="海盗周"data-id="10"data-description="这是图片 10 的说明文字。">
+            <h3>海盗周</h3>
+            <p>海盗来啦快保护物资</p>
+            <div class="countdown" data-end-date="2025-09-15T00:00:00"></div>
+            <script src="shouye.js"></script>
+        </div>
+        <div>
+            <img src="images/公民控.jpg" alt="公民控"data-id="11"data-description="这是图片 11 的说明文字。">
+            <h3>公民控</h3>
+            <p>又要开始画饼了</p>
+            <div class="countdown" data-end-date="2025-10-21T00:00:00"></div>
+            <script src="shouye.js"></script>
+        </div>
+         <!-- 弹窗 -->
+         <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <img id="modalImage" src="" alt="弹窗图片">
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+        <script>
+            // 获取元素
+            const images = document.querySelectorAll('img');
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modalImage');
+            const modalDescription = document.getElementById('modalDescription');
+            const closeModal = document.getElementById('closeModal');
+    
+            // 点击图片显示弹窗
+            images.forEach(image => {
+                image.addEventListener('click', () => {
+                    const src = image.getAttribute('src'); // 获取图片地址
+                    const description = image.getAttribute('data-description'); // 获取说明文字
+    
+                    // 设置弹窗内容
+                    modalImage.src = src;
+                    modalDescription.textContent = description;
+    
+                    // 显示弹窗
+                    modal.style.display = 'flex';
+                });
+            });
+    
+            // 点击关闭按钮隐藏弹窗
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+    
+            // 点击弹窗外部隐藏弹窗
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        </script>
+
+    </section>
+    <section>
+        <div class="peren">
+            <h4>舰队成员展示</h4>
+        </div>
+    </section>
+    <section>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/chenxupeng.png" alt="chenxupeng">
+            </div>
+            <div class="gallery-item">
+                <img src="images/猫猫.png" alt="猫猫">
+            </div>
+            <div class="gallery-item">
+                <img src="images/毛毛.png" alt="毛毛">
+            </div>
+            <div class="gallery-item">
+                <img src="images/123.png" alt="123">
+            </div>
+            <div class="gallery-item">
+                <img src="images/nainiu9565.png" alt="nainiu9565">
+            </div>
+            <div class="gallery-item">
+                <img src="images/空想.png" alt="空想">
+            </div>
+            <div class="gallery-item">
+                <img src="images/Acat.png" alt="Acat">
+            </div>
+            <div class="gallery-item">
+                <img src="images/ai9.png" alt="ai9">
+            </div>
+            <div class="gallery-item">
+                <img src="images/huanmo.png" alt="huanmo">
+            </div>
+            <div class="gallery-item">
+                <img src="images/mark0413.png" alt="mark0413">
+            </div>
+            <div class="gallery-item">
+                <img src="images/palmcolor.png" alt="palmcolor">
+            </div>
+            <div class="gallery-item">
+                <img src="images/qq112211qq.png" alt="qq112211qq">
+            </div>
+            <div class="gallery-item">
+                <img src="images/scholar.png" alt="scholar">
+            </div>
+            <div class="gallery-item">
+                <img src="images/zb.png" alt="zb">
+            </div>
+            <div class="gallery-item">
+                <img src="images/acity.png" alt="acity">
+            </div>
+            <div class="gallery-item">
+                <img src="images/LiTianXian.png" alt="acity">
+            </div>
+            <div class="gallery-item">
+                <img src="images/cmaliang.png" alt="acity">
+            </div>
+            <div class="gallery-item">
+                <img src="images/x_x9837.png" alt="acity">
+            </div>
+            <div class="gallery-item">
+                <img src="images/柒柒.png" alt="acity">
+            </div>
+            <div class="gallery-item">
+                <img src="images/Eliot11.png" alt="acity">
+            </div>
+            <div class="gallery-item">
+                <img src="images/hbhbhb.png" alt="acity">
+            </div>
+            <div class="gallery-item">
+                <img src="images/Wld323.png" alt="acity">
+            </div>
+            <div class="gallery-item">
+                <img src="images/Billmade.png" alt="acity">
+            </div>
+            <div class="gallery-item">
+                <img src="images/999991.png" alt="acity">
+            </div>
+            <div class="gallery-item">
+                <img src="images/XuuGG.png" alt="acity">
+            </div>
+            <div class="gallery-item">
+                <img src="images/lingmuya.png" alt="acity">
+            </div>
+            <div class="gallery-item">
+                <img src="images/tingge1.png" alt="acity">
+            </div>
+        </div>
+        <div class="modal" id="imageModal">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <img class="modal-img" id="expandedImg">
+            </div>
+        </div>
+        <script>
+            // 获取所有图片项
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            // const modal = document.getElementById('imageModal');
+            const expandedImg = document.getElementById('expandedImg');
+    
+            // 添加点击事件监听
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const imgSrc = this.querySelector('img').src;
+                    openModal(imgSrc);
+                });
+            });
+    
+            // 打开模态框
+            function openModal(src) {
+                expandedImg.src = src;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+    
+            // 关闭模态框
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+    
+            // 点击模态框背景关闭
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+    
+            // ESC键关闭
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+        </script>
+    </section>
+        <section>
+        <div class="peren">
+            <h4>舰队成员风采</h4>
+        </div>
+    </section>
+    <section class="product">
+        <div>
+            <img src="images/风采1.png" alt="风采1">
+            <h3>成员风采展示</h3>
+            <p>这是在微科星的小镇旁边有一条小河，日落时分</p>
+        </div>
+        <div>
+            <img src="images/风采2.png" alt="风采2">
+            <h3>成员风采展示</h3>
+            <p>嘿！，阿蒂麦斯套装哦，这是我们在北极星上面的合照 chenxupeng和99991的合照</p>
+        </div>
+        <div>
+            <img src="images/风采3.png" alt="风采3">
+            <h3>成员风采展示</h3>
+            <p>这是我们在炽天使空间站准备登北极星前的合照</p>
+        </div>
+    </section>
+
+
+    </main>
+
+    <section class="missile">
+        <div>
+            <p>数据统计表</p>
+        </div>
+    </section>
+    <section class="missile-table">
+        <h2>数据更新版本live3.24</h2>
+        <button id="loadData">加载数据</button>
+        <div class="table-container">
+            <table id="dataTable"></table>
+        </div>
+    
+        <script>
+            const table = document.getElementById('dataTable');
+            const loadButton = document.getElementById('loadData');
+    
+            loadButton.addEventListener('click', function () {
+                fetch('missile.xlsx') // 服务器上的 Excel 文件路径
+                    .then(response => response.arrayBuffer())
+                    .then(data => {
+                        const workbook = XLSX.read(data, { type: 'array' });
+    
+                        // 获取第一个工作表
+                        const sheetName = workbook.SheetNames[0];
+                        const sheet = workbook.Sheets[sheetName];
+    
+                        // 将工作表数据转换为 HTML 表格
+                        table.innerHTML = XLSX.utils.sheet_to_html(sheet);
+                    })
+                    .catch(error => console.error('加载数据失败:', error));
+            });
+        </script>
+    </section>
+    
+    <footer class="el-footer" data-v-08a5779c data-v-ea305952>
+        <div class="footer__container" data-v-08a5779c>
+            <div class="info_centen">
+                <div class="el-row">
+                    <div class="el-col" data-v-08a5779c>
+                        <span data-v-08a5779c style="float: left;">邮编:230000</span>
+                    </div>
+                    <div class="el-col" data-v-08a5779c>
+                        <span data-v-08a5779c style="float: left;">地址:合肥市包河区</span>
+                    </div>
+                    <div class="el-col" data-v-08a5779c>
+                        <span data-v-08a5779c style="float: left;">网站标识码:bm09000026</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rightPicture" data-v-08a5779c>
+                <div class="el-image__inner" data-v-08a5779c style="float: left;">
+                    <img src="images/二维码.jpg" alt="el-image__inner" style="object-fit: contain;">
+    
+                </div>
+            </div>
+            <div class="DownContent"data-v-08a5779c>
+                <div class="leftFont"data-v-08a5779c>
+                    <p class="white"data-v-08a5779c>
+                        版权所有：斯曼达洛舰队
+                    </p>
+                    <p class="white"data-v-08a5779c>
+                        <div class="el-image" data-v-08a5779c style="width: 16px;">
+                            <img src="images/logo01.dd7ff50e.png" alt="el-image__inner" style="object-fit: contain;">
+
+                        </div>
+                        <a class="jicpb" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34011102003650" target="_blank" data-v-08a5779c style="color: rgb(116, 154, 227) !important;">皖公网安备 34011102003650号</a>
+                        <a class="jicpb" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" data-v-08a5779c="" style="color: rgb(116, 154, 227) !important; margin-left: 20px;">皖ICP备2025074416号</a>
+                    </p>
+                    <p class="white" data-v-08a5779c=""> 建议您使用Edge、Chrome 80+、FireFox 86+、360极速模式等主流浏览器浏览本网站 </p>
+
+                </div>
+                                    
+            </div>
+        </div>
+
+        <!-- <p>COPYRIGHT © 2025 斯曼达洛舰队 Spartan Mandalorian Fleet  丨皖公网安备34011102003650号  ICP主体备案号  皖ICP备2025074416号丨</p> -->
+    </footer>
+    <div class="background"></div>
+
+</body>
+</html>
